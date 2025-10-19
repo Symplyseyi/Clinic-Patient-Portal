@@ -1,0 +1,1618 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mona Sans", sans-serif;
+}
+
+:root {
+  /* COLORS */
+
+  --mainBg-color: #b0c5ca;
+  --sidebarBg-color: #07596c;
+  --right-SectionBg-color: #f5f6f8;
+  --cardBg-color: #ffffff;
+  --logoColor: linear-gradient(360deg, #c1f6d1, #065862, #9fe6c4);
+  --sidebarIcon-color: #589fb1;
+  --backText-color: #b0b5b8;
+  --avatarName-color: #4f5457;
+  --avatarBg-color: #48ba8e;
+  --pryText-color: #292f32;
+  --secText-color: #d2d4d3;
+  --addPrescription-color: #8ec2b2;
+  --hIcon-color: #da8b4c;
+  --yellowIcon-color: #e6c26c;
+  --greenIcon-color: #3d7986;
+
+  /* TYPOGRAPHY */
+
+  --fontWeight-bold: 700;
+  --fontWeight-semi-bold: 600;
+  --fontWeight-medium: 500;
+  --fontSize-big: 1.25rem;
+  --fontSize-medium: 1rem;
+  --fontSize-small: 0.9rem;
+  --fontSize-samllText: 0.75rem;
+  --letterSpacing-normal: -0.25px;
+  --letterSpacing-medium: -0.5px;
+  --letterSpacing-small: -0.75px;
+
+  /* SPACING */
+
+  --space1: 0.25rem;
+  --space2: 0.5rem;
+  --space3: 0.75rem;
+  --space4: 1rem;
+  --space5: 1.25rem;
+  --space6: 1.5rem;
+  --space7: 1.75rem;
+  --space8: 2rem;
+  --space9: 2.25rem;
+  --space10: 2.5rem;
+  --space11: 2.75rem;
+  --space12: 3rem;
+  --space13: 3.25rem;
+  --space14: 3.5rem;
+  --space15: 3.75rem;
+  --space16: 4rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  background-color: var(--right-SectionBg-color);
+}
+
+.left-side {
+  width: 8%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space8);
+  background-color: var(--sidebarBg-color);
+  padding: var(--space4) var(--space8);
+}
+
+.sidebar-logo-container {
+  width: fit-content;
+  height: auto;
+}
+
+.sidebar-logo-container span {
+  font-size: 32px;
+  background: var(--logoColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar-icons-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space6);
+  padding-left: var(--space1);
+}
+
+.sidebar-icons-container span {
+  font-size: 24px;
+  color: var(--sidebarIcon-color);
+  cursor: pointer;
+}
+
+.sidebar-icons-container span:hover {
+  color: var(--avatarBg-color);
+}
+
+.right-side-container {
+  width: 92%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-self: start;
+  padding: var(--space3) var(--space5);
+  background-color: var(--right-SectionBg-color);
+}
+
+.top-rightside-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon span {
+  display: none;
+  cursor: pointer;
+  color: var(--sidebarBg-color);
+  font-size: 32px;
+}
+
+.back-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space1);
+}
+
+.back-container span {
+  font-size: 20px;
+  color: var(--backText-color);
+}
+
+.back-container p {
+  font-size: var(--fontSize-samllText);
+  font-weight: var(--fontWeight-semi-bold);
+  color: var(--backText-color);
+}
+
+.notification-and-avatar-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space3);
+}
+
+.notification {
+  width: fit-content;
+  height: auto;
+}
+
+.notification span {
+  font-size: 20px;
+  color: var(--backText-color);
+  cursor: pointer;
+}
+
+.avatar-and-texts {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space1);
+}
+
+.avatar-and-texts img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 1000rem;
+}
+
+.avatar-and-texts {
+  font-size: var(--fontSize-samllText);
+  font-weight: var(--fontWeight-semi-bold);
+  color: var(--avatarName-color);
+}
+
+.avatar-and-texts span {
+  font-size: 20px;
+  color: var(--avatarName-color);
+}
+
+.bottom-rightside-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space2);
+}
+
+.bottom-rightside-heading {
+  width: fit-content;
+  height: auto;
+}
+
+.bottom-rightside-heading p {
+  font-size: 1.2rem;
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+  padding-top: var(--space2);
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.bottom-rightside-body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: var(--space4);
+}
+
+.patient-profile-and-info {
+  width: 32%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space4);
+}
+
+.patient-profile-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space2) var(--space6);
+  background-color: var(--cardBg-color);
+  border-radius: var(--space3);
+  row-gap: var(--space1);
+}
+
+.patient-profile-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--space4);
+}
+
+.p-p-container-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space1);
+}
+
+.patient-profile-container p:first-of-type {
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.patient-profile-container p:last-of-type {
+  font-size: var(--fontSize-samllText);
+  color: var(--backText-color);
+}
+
+button {
+  padding: 0.6rem var(--space6);
+  background-color: var(--avatarBg-color);
+  color: var(--cardBg-color);
+  border: none;
+  outline: none;
+  border-radius: var(--space3);
+  font-weight: var(--fontWeight-semi-bold);
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  background-color: #065862;
+}
+
+.patient-info-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+  padding: var(--space5) var(--space8);
+  background-color: var(--cardBg-color);
+  border-radius: var(--space3);
+}
+
+.info-heading {
+  width: fit-content;
+  height: auto;
+}
+
+.info-heading p {
+  font-size: var(--fontSize-medium);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.info-details {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-first-texts {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.info-first-texts p {
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-semi-bold);
+  color: var(--pryText-color);
+}
+
+.info-last-texts {
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  row-gap: var(--space3);
+}
+
+.info-last-texts p {
+  font-size: var(--fontSize-small);
+  color: var(--avatarName-color);
+}
+
+.patient-medical-history {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space4);
+}
+
+.medical-history-first-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: var(--space4);
+}
+
+.heart-rate-card,
+.body-temp-card,
+.glucose-card {
+  width: 32%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space6) var(--space14);
+  background-color: var(--cardBg-color);
+  border-radius: var(--space3);
+  row-gap: var(--space1);
+}
+
+.heart-rate-card .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--hIcon-color);
+}
+
+.first-text {
+  font-size: var(--fontSize-samllText);
+  font-weight: var(--fontWeight-bold);
+  color: var(--avatarName-color);
+}
+
+.second-text-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-text-container p {
+  font-size: 1.75rem;
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.second-text-container span {
+  font-size: var(--fontSize-medium);
+  font-weight: var(--fontWeight-medium);
+  color: var(--avatarName-color);
+  padding-top: var(--space2);
+}
+
+.body-temp-card .second-text-container span {
+  padding-top: var(--space2);
+  font-size: var(--fontSize-medium);
+}
+.body-temp-card .material-symbols-outlined {
+  color: var(--yellowIcon-color);
+}
+
+.glucose-card .material-symbols-outlined {
+  color: var(--hIcon-color);
+}
+
+.medical-history-second-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space4);
+  background-color: var(--cardBg-color);
+  padding: var(--space6);
+  border-radius: var(--space3);
+}
+
+.mh-second-card-heading {
+  width: fit-content;
+  height: auto;
+}
+
+.mh-second-card-heading p {
+  font-size: var(--fontSize-medium);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.mh-second-card-subcards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.mh-subcard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.subcard-logo {
+  width: fit-content;
+  height: auto;
+  padding: var(--space1) var(--space3);
+  background-color: var(--right-SectionBg-color);
+  border-radius: var(--space1);
+}
+
+.first {
+  font-size: 28px;
+  color: var(--avatarBg-color);
+}
+
+.second {
+  font-size: 28px;
+  color: var(--yellowIcon-color);
+}
+
+.last {
+  font-size: 28px;
+  color: var(--hIcon-color);
+}
+
+.subcard-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.subcard-texts p {
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.subcard-texts span {
+  font-size: var(--fontSize-samllText);
+  font-weight: var(--fontWeight-medium);
+  color: var(--avatarName-color);
+}
+
+.medical-history-last-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space8);
+  background-color: var(--cardBg-color);
+  padding: var(--space4) var(--space6) var(--space5) var(--space6);
+  border-radius: var(--space3);
+}
+
+.prescription-and-add-prescription {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.mh-last-card-heading {
+  width: fit-content;
+  height: auto;
+}
+
+.mh-last-card-heading p {
+  font-size: var(--fontSize-medium);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.mh-add-prescription {
+  width: fit-content;
+  height: auto;
+}
+
+.mh-add-prescription a {
+  text-decoration: none;
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-semi-bold);
+  color: var(--avatarBg-color);
+}
+
+.mh-add-prescription a:hover {
+  color: var(--sidebarBg-color);
+}
+
+.first-prescription-container {
+  display: none;
+}
+
+.prescription-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space4);
+}
+
+.prescription-subheading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 var(--space6);
+}
+
+.prescription-subheading p {
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-bold);
+  color: var(--pryText-color);
+}
+
+.prescription-lists {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.prescription-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--space3) var(--space4);
+  border: 1px solid var(--right-SectionBg-color);
+  border-radius: var(--space3);
+}
+
+.pres-icon-and-text {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.pres-icon-and-text span {
+  font-size: 24px;
+  color: var(--yellowIcon-color);
+}
+
+.pres-icon-and-text p {
+  font-weight: var(--fontWeight-bold);
+}
+
+.prescription-list p {
+  font-size: var(--fontSize-small);
+  color: var(--pryText-color);
+}
+
+/* Media Tablet Versiom */
+
+@media screen and (max-width: 1140px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--right-SectionBg-color);
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: start;
+    background-color: var(--right-SectionBg-color);
+  }
+
+  .top-rightside-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-top: -2.5rem;
+  }
+
+  .menu-icon span {
+    display: block;
+    cursor: pointer;
+    color: var(--sidebarBg-color);
+    font-size: 32px;
+  }
+
+  .back-container {
+    display: none;
+  }
+
+  .notification-and-avatar-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+    column-gap: var(--space2);
+    padding-top: var(--space4);
+  }
+
+  .bottom-rightside-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space2);
+  }
+
+  .bottom-rightside-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .patient-profile-and-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .patient-profile-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space6) var(--space10);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+    row-gap: var(--space2);
+  }
+
+  .patient-profile-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--space2);
+  }
+
+  button {
+    width: 100%;
+    height: auto;
+    padding-top: var(--space2);
+    background-color: var(--avatarBg-color);
+    color: var(--cardBg-color);
+    border: none;
+    outline: none;
+    border-radius: var(--space2);
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    cursor: pointer;
+  }
+
+  button:focus,
+  button:hover {
+    background-color: #065862;
+  }
+
+  .patient-info-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+    padding: var(--space5) var(--space8);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+  }
+
+  .info-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .info-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .info-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .info-first-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+  }
+
+  .info-first-texts p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    color: var(--pryText-color);
+  }
+
+  .info-last-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    row-gap: var(--space3);
+  }
+
+  .info-last-texts p {
+    font-size: var(--fontSize-small);
+    color: var(--avatarName-color);
+  }
+
+  .patient-medical-history {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .medical-history-first-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    column-gap: var(--space4);
+  }
+
+  .heart-rate-card,
+  .body-temp-card,
+  .glucose-card {
+    width: 32%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space14);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+    row-gap: var(--space1);
+  }
+
+  .heart-rate-card .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--hIcon-color);
+  }
+
+  .first-text {
+    font-size: var(--fontSize-samllText);
+    font-weight: var(--fontWeight-bold);
+    color: var(--avatarName-color);
+  }
+
+  .second-text-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-text-container p {
+    font-size: 1.75rem;
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .second-text-container span {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-medium);
+    color: var(--avatarName-color);
+    padding-top: var(--space2);
+  }
+
+  .body-temp-card .second-text-container span {
+    padding-top: var(--space2);
+    font-size: var(--fontSize-medium);
+  }
+  .body-temp-card .material-symbols-outlined {
+    color: var(--yellowIcon-color);
+  }
+
+  .glucose-card .material-symbols-outlined {
+    color: var(--hIcon-color);
+  }
+
+  .medical-history-second-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space8);
+    background-color: var(--cardBg-color);
+    padding: var(--space6);
+    border-radius: var(--space3);
+  }
+
+  .mh-second-card-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-second-card-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .mh-second-card-subcards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .mh-subcard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: var(--space4);
+  }
+
+  .subcard-logo {
+    width: fit-content;
+    height: auto;
+    padding: var(--space1) var(--space3);
+    background-color: var(--right-SectionBg-color);
+    border-radius: var(--space1);
+  }
+
+  .first {
+    font-size: 28px;
+    color: var(--avatarBg-color);
+  }
+
+  .second {
+    font-size: 28px;
+    color: var(--yellowIcon-color);
+  }
+
+  .last {
+    font-size: 28px;
+    color: var(--hIcon-color);
+  }
+
+  .subcard-texts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .subcard-texts p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .subcard-texts span {
+    font-size: var(--fontSize-samllText);
+    font-weight: var(--fontWeight-medium);
+    color: var(--avatarName-color);
+  }
+
+  .medical-history-last-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space8);
+    background-color: var(--cardBg-color);
+    padding: var(--space6) var(--space6) var(--space6) var(--space6);
+    border-radius: var(--space3);
+  }
+
+  .prescription-and-add-prescription {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .mh-last-card-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-last-card-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .mh-add-prescription {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-add-prescription a {
+    text-decoration: none;
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    color: var(--avatarBg-color);
+  }
+
+  .mh-add-prescription a:hover {
+    color: var(--sidebarBg-color);
+  }
+
+  .prescription-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .prescription-subheading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 var(--space3);
+  }
+
+  .prescription-subheading p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .prescription-lists {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+  }
+
+  .prescription-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: var(--space3) var(--space4);
+    border: 1px solid var(--right-SectionBg-color);
+    border-radius: var(--space3);
+  }
+
+  .pres-icon-and-text {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: var(--space2);
+    padding: var(--space1) var(--space2);
+  }
+
+  .pres-icon-and-text span {
+    font-size: 24px;
+    color: var(--yellowIcon-color);
+  }
+
+  .pres-icon-and-text p {
+    font-weight: var(--fontWeight-bold);
+  }
+
+  .prescription-list p {
+    font-size: var(--fontSize-small);
+    color: var(--pryText-color);
+  }
+}
+
+/* Media Mobile Version */
+
+@media screen and (max-width: 540px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--right-SectionBg-color);
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: start;
+    background-color: var(--right-SectionBg-color);
+  }
+
+  .top-rightside-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-top: -2.5rem;
+  }
+
+  .menu-icon span {
+    display: block;
+    cursor: pointer;
+    color: var(--sidebarBg-color);
+    font-size: 32px;
+  }
+
+  .back-container {
+    display: none;
+  }
+
+  .notification-and-avatar-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+    column-gap: var(--space2);
+    padding-top: var(--space4);
+  }
+
+  .bottom-rightside-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space2);
+  }
+
+  .bottom-rightside-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .patient-profile-and-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .patient-profile-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space6) var(--space10);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+    row-gap: var(--space2);
+  }
+
+  .patient-profile-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--space2);
+  }
+
+  button {
+    width: 100%;
+    height: auto;
+    padding-top: var(--space2);
+    background-color: var(--avatarBg-color);
+    color: var(--cardBg-color);
+    border: none;
+    outline: none;
+    border-radius: var(--space2);
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    cursor: pointer;
+  }
+
+  button:focus,
+  button:hover {
+    background-color: #065862;
+  }
+
+  .patient-info-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+    padding: var(--space5) var(--space8);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+  }
+
+  .info-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .info-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .info-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .info-first-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+  }
+
+  .info-first-texts p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    color: var(--pryText-color);
+  }
+
+  .info-last-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    row-gap: var(--space3);
+  }
+
+  .info-last-texts p {
+    font-size: var(--fontSize-small);
+    color: var(--avatarName-color);
+  }
+
+  .patient-medical-history {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .medical-history-first-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .heart-rate-card,
+  .body-temp-card,
+  .glucose-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: var(--space8);
+    background-color: var(--cardBg-color);
+    border-radius: var(--space3);
+    row-gap: var(--space1);
+  }
+
+  .heart-rate-card .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--hIcon-color);
+  }
+
+  .first-text {
+    font-size: var(--fontSize-samllText);
+    font-weight: var(--fontWeight-bold);
+    color: var(--avatarName-color);
+  }
+
+  .second-text-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-text-container p {
+    font-size: 1.75rem;
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .second-text-container span {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-medium);
+    color: var(--avatarName-color);
+    padding-top: var(--space2);
+  }
+
+  .body-temp-card .second-text-container span {
+    padding-top: var(--space2);
+    font-size: var(--fontSize-medium);
+  }
+  .body-temp-card .material-symbols-outlined {
+    color: var(--yellowIcon-color);
+  }
+
+  .glucose-card .material-symbols-outlined {
+    color: var(--hIcon-color);
+  }
+
+  .medical-history-second-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space8);
+    background-color: var(--cardBg-color);
+    padding: var(--space6);
+    border-radius: var(--space3);
+  }
+
+  .mh-second-card-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-second-card-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .mh-second-card-subcards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space3);
+  }
+
+  .mh-subcard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: var(--space6);
+    border: 1px solid var(--right-SectionBg-color);
+    padding: var(--space3) var(--space4);
+    border-radius: var(--space2);
+  }
+
+  .subcard-logo {
+    width: fit-content;
+    height: auto;
+    padding: var(--space1) var(--space3);
+    background-color: var(--right-SectionBg-color);
+    border-radius: var(--space1);
+  }
+
+  .first {
+    font-size: 28px;
+    color: var(--avatarBg-color);
+  }
+
+  .second {
+    font-size: 28px;
+    color: var(--yellowIcon-color);
+  }
+
+  .last {
+    font-size: 28px;
+    color: var(--hIcon-color);
+  }
+
+  .subcard-texts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .subcard-texts p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .subcard-texts span {
+    font-size: var(--fontSize-samllText);
+    font-weight: var(--fontWeight-medium);
+    color: var(--avatarName-color);
+  }
+
+  .medical-history-last-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space8);
+    background-color: var(--cardBg-color);
+    padding: var(--space6);
+    border-radius: var(--space3);
+  }
+
+  .prescription-and-add-prescription {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .mh-last-card-heading {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-last-card-heading p {
+    font-size: var(--fontSize-medium);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .mh-add-prescription {
+    width: fit-content;
+    height: auto;
+  }
+
+  .mh-add-prescription a {
+    text-decoration: none;
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-semi-bold);
+    color: var(--avatarBg-color);
+  }
+
+  .mh-add-prescription a:hover {
+    color: var(--sidebarBg-color);
+  }
+
+  .prescription-container {
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .first-prescription-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space6);
+  }
+
+  .first-sub-prescription {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid var(--right-SectionBg-color);
+    padding-bottom: var(--space6);
+  }
+
+  .sub-heading-list {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: var(--space4);
+  }
+
+  .sub-heading-list p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-bold);
+    color: var(--pryText-color);
+  }
+
+  .sub-text-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    row-gap: var(--space4);
+  }
+
+  .sub-text-list p {
+    font-size: var(--fontSize-small);
+    font-weight: var(--fontWeight-medium);
+    color: var(--pryText-color);
+  }
+}

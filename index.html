@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Patient Portal</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-side">
+        <div class="sidebar-logo-container">
+          <span class="material-symbols-outlined"> borg </span>
+        </div>
+
+        <div class="sidebar-icons-container">
+          <span class="material-symbols-outlined"> grid_view </span>
+          <span class="material-symbols-outlined"> group </span>
+          <span class="material-symbols-outlined"> monitor_heart </span>
+          <span class="material-symbols-outlined"> article </span>
+          <span class="material-symbols-outlined"> tab_recent </span>
+          <span class="material-symbols-outlined"> folder </span>
+        </div>
+      </div>
+
+      <div class="right-side-container">
+        <div class="menu-icon">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+
+        <div class="top-rightside-container">
+          <div class="back-container">
+            <span class="material-symbols-outlined"> arrow_left_alt </span>
+            <p>Back to dashboard</p>
+          </div>
+
+          <div class="notification-and-avatar-container">
+            <div class="notification">
+              <span class="material-symbols-outlined"> notifications </span>
+            </div>
+
+            <div class="avatar-and-texts">
+              <img src="./images/avatar-2.jpg" alt="Avatar image" />
+              <p>Dr. Alex Hass</p>
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-rightside-container">
+          <div class="bottom-rightside-heading">
+            <p>Current Appointment</p>
+          </div>
+
+          <div class="bottom-rightside-body">
+            <div class="patient-profile-and-info">
+              <div class="patient-profile-container">
+                <img src="./images/avatar.png" alt="Patient Image" />
+                <div class="p-p-container-texts">
+                  <p>Roger Curtis</p>
+                  <p>Age: 36</p>
+                  <button>Update</button>
+                </div>
+              </div>
+
+              <div class="patient-info-container">
+                <div class="info-heading">
+                  <p>Information:</p>
+                </div>
+
+                <div class="info-details">
+                  <div class="info-first-texts">
+                    <p>Gender:</p>
+                    <p>Blood Type:</p>
+                    <p>Alergies:</p>
+                    <p>Diseases:</p>
+                    <p>Height:</p>
+                    <p>Weight:</p>
+                    <p>Patient ID:</p>
+                    <p>Last Visit:</p>
+                  </div>
+
+                  <div class="info-last-texts">
+                    <p>Male</p>
+                    <p>O + (Positive)</p>
+                    <p>Milk, Penicilin</p>
+                    <p>Diabetes Blood Disorder</p>
+                    <p>1.8m</p>
+                    <p>68kg</p>
+                    <p>308899756</p>
+                    <p>15th Oct 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="patient-medical-history">
+              <div class="medical-history-first-card">
+                <div class="heart-rate-card">
+                  <span class="material-symbols-outlined"> cardiology </span>
+                  <div class="first-text">
+                    <p>Heart Rate</p>
+                  </div>
+                  <div class="second-text-container">
+                    <p>80</p>
+                    <span>bpm</span>
+                  </div>
+                </div>
+
+                <div class="body-temp-card">
+                  <span class="material-symbols-outlined">
+                    device_thermostat
+                  </span>
+                  <div class="first-text">
+                    <p>Body Temperature</p>
+                  </div>
+                  <div class="second-text-container">
+                    <p>36.5</p>
+                    <span>'c</span>
+                  </div>
+                </div>
+
+                <div class="glucose-card">
+                  <span class="material-symbols-outlined"> glucose </span>
+                  <div class="first-text">
+                    <p>Glucose</p>
+                  </div>
+                  <div class="second-text-container">
+                    <p>100</p>
+                    <span>mg/dl</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="medical-history-second-card">
+                <div class="mh-second-card-heading">
+                  <p>Test Reports</p>
+                </div>
+
+                <div class="mh-second-card-subcards">
+                  <div class="mh-subcard">
+                    <div class="subcard-logo first">
+                      <span class="material-symbols-outlined"> radiology </span>
+                    </div>
+
+                    <div class="subcard-texts">
+                      <p>CT Scan-Full Body</p>
+                      <span>12th February 2025</span>
+                    </div>
+                  </div>
+
+                  <div class="mh-subcard">
+                    <div class="subcard-logo second">
+                      <span class="material-symbols-outlined"> radiology </span>
+                    </div>
+
+                    <div class="subcard-texts">
+                      <p>Creatine Kinase T</p>
+                      <span>12th February 2025</span>
+                    </div>
+                  </div>
+
+                  <div class="mh-subcard">
+                    <div class="subcard-logo last">
+                      <span class="material-symbols-outlined"> radiology </span>
+                    </div>
+
+                    <div class="subcard-texts">
+                      <p>Eye Fluorescein Test</p>
+                      <span>12th February 2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="medical-history-last-card">
+                <div class="prescription-and-add-prescription">
+                  <div class="mh-last-card-heading">
+                    <p>Prescription</p>
+                  </div>
+
+                  <div class="mh-add-prescription">
+                    <a href="#">+ Add a prescription</a>
+                  </div>
+                </div>
+
+                <div class="first-prescription-container">
+                  <div class="first-sub-prescription">
+                    <div class="sub-heading-list">
+                      <p>Prescription</p>
+                      <p>Date</p>
+                      <p>Duration</p>
+                    </div>
+
+                    <div class="sub-text-list">
+                      <p>Heart Diseases</p>
+                      <p>25th August 2025</p>
+                      <p>3 Months</p>
+                    </div>
+                  </div>
+
+                  <div class="first-sub-prescription">
+                    <div class="sub-heading-list">
+                      <p>Prescription</p>
+                      <p>Date</p>
+                      <p>Duration</p>
+                    </div>
+
+                    <div class="sub-text-list">
+                      <p>Skin Care</p>
+                      <p>15 June 2025</p>
+                      <p>2 Months</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="prescription-container">
+                  <div class="prescription-subheading">
+                    <p>Prescription</p>
+                    <p>Date</p>
+                    <p>Duration</p>
+                  </div>
+
+                  <div class="prescription-lists">
+                    <div class="prescription-list">
+                      <div class="pres-icon-and-text">
+                        <span class="material-symbols-outlined">
+                          oral_disease
+                        </span>
+                        <p>Heart Diseases</p>
+                      </div>
+
+                      <p>25th August 2025</p>
+                      <p>3 Months</p>
+                    </div>
+
+                    <div class="prescription-list">
+                      <div class="pres-icon-and-text">
+                        <span class="material-symbols-outlined">
+                          oral_disease
+                        </span>
+                        <p>Skin Care</p>
+                      </div>
+
+                      <p>15 June 2025</p>
+                      <p>2 Months</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
